@@ -1,6 +1,6 @@
 ## Abrir no GitBash
 - Clone:
-`git clone https://github.com/SEU_USUARIO/projeto-ia.git`
+`https://github.com/zGUiWF/projeto-ia.git`
 
 - Abrir Projeto:
 `cd projeto-ia`
