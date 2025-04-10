@@ -1,15 +1,15 @@
 ## Abrir no GitBash
 - Clone:
-git clone https://github.com/SEU_USUARIO/projeto-ia.git
+`git clone https://github.com/SEU_USUARIO/projeto-ia.git`
 
 - Abrir Projeto:
-cd projeto-ia
+`cd projeto-ia`
 
 - Criar ambiente conda:
-conda env create -f environment.yml
+`conda env create -f environment.yml`
 
 - Ativar ambiente conda:(Ativar sempre que for mexer no Projeto, funciona como uma venv)
-conda activate projeto-ia
+`conda activate projeto-ia`
 
 
 ## Extensões VScode recomendadas
