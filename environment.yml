@@ -1,17 +1,18 @@
 name: projeto-ia
 channels:
-  - defaults
   - conda-forge
+  - defaults
 dependencies:
   - python=3.10
+  - pandas=2.2.1
+  - numpy=1.26.4
+  - scikit-learn=1.4.2
+  - xgboost=2.0.3
+  - imbalanced-learn=0.12.0
+  - notebook
   - jupyterlab
-  - pandas
-  - numpy
   - matplotlib
   - seaborn
-  - scikit-learn
-  - xgboost
-  - ipykernel
   - pip
   - pip:
-      - imbalanced-learn
+    - jupyter_contrib_nbextensions
