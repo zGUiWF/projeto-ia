@@ -1,40 +1,47 @@
-## Abrir no GitBash
-- Clone:
-`https://github.com/zGUiWF/projeto-ia.git`
+# Projeto de IA: Predição de Evasão Acadêmica com XAI
 
-- Abrir Projeto:
-`cd projeto-ia`
+Este projeto tem como objetivo aplicar técnicas de Machine Learning (ML) e Inteligência Artificial (IA) para prever a evasão de alunos com base em dados educacionais. Utilizamos um pipeline completo que vai desde a análise exploratória até a explicação dos modelos utilizando técnicas de XAI (eXplainable AI).
 
-- Criar ambiente conda:
-`conda env create -f environment.yml`
+## 📊 Visão Geral
 
-- Ativar ambiente conda:(Ativar sempre que for mexer no Projeto, funciona como uma venv)
-`conda activate projeto-ia`
+O modelo é treinado a partir de um conjunto de dados contendo informações de acesso, engajamento e dados pessoais dos alunos. O foco é identificar padrões de evasão e aplicar modelos de classificação para prever quais alunos têm maior risco de abandonar a plataforma de ensino.
 
+## 🧪 Etapas do Projeto
 
-## Extensões VScode recomendadas
-- Jupyter : Para compatibilidade com jupyter notebook
-- Python : Pacotes padrão python
-- Rainbow CSV : Melhor visualização de arquivos CSV
-- Reload : Restart VScode
-- GitLens : Mostra histórico de cada linha, comparação de branches, visualizações de merge
-- Better Comments : Destaca tipos diferentes de comentários (TODO, !importante, ?pergunta, etc.)
-- Path Intellisense : Autocompleta caminhos de arquivos (útil ao lidar com dados, .csv, imagens, etc.)
+1. **Importação de bibliotecas e dados**  
+   Carregamento dos principais DataFrames utilizados para análise.
 
+2. **Análise Exploratória e Pré-processamento**  
+   - Visualização de dados base  
+   - Conversão de timestamps  
+   - Tratamento de valores faltantes por três abordagens (com destaque para o método final utilizado)  
+   - Remoção de dados irrelevantes  
+   - Feature Engineering e seleção de variáveis
 
-## Estrutura
-- `data/`: Arquivos de dados brutos (.csv),(Não alterar base "dados_projeto_evasão_teste/treino.csv", duplique e coloque seu nome no arquivo para alterações)
+3. **Definição de Lógica de Evasão**  
+   - Alunos ausentes por 30 dias (fora do período de férias)
+   - Alunos que iniciaram mas ficaram inativos por mais de 15 dias
 
-- `notebooks/`: Notebooks exploratórios(Coloque seu nome no seu notebook)
+4. **Modelagem Preditiva**  
+   - Random Forest Classifier  
+   - XGBoost Classifier  
+   - Comparação entre os modelos em métricas como Acurácia, Precisão e Recall
 
-- `models/`: Modelos salvos
-    - Nescessario para uso : `import joblib`
-    - Salvar modelo : `joblib.dump(modelo, 'models/NOME DO MODEL SALVO.joblib')`
-    - Carregar modelo : `modelo_carregado = joblib.load('models/NOME DO MODEL SALVO.joblib')`
+5. **Interpretação com XAI**  
+   Técnicas explicáveis foram utilizadas para justificar as decisões dos modelos, promovendo transparência.
 
+## 🧠 Modelos Utilizados
 
-## Ao rodar um notebook colocar kernel conda
-- Play code > Python Environments > projeto-ia (Python 3.10.16)
+- `RandomForestClassifier`
+- `XGBoostClassifier`
 
+Ambos foram avaliados e comparados quanto ao seu desempenho preditivo e interpretabilidade.
 
-OBS:esse não é o README final
+## 🧰 Tecnologias e Bibliotecas
+
+- Python 3.10+
+- Pandas
+- NumPy
+- scikit-learn
+- XGBoost
+- Matplotlib / Seaborn
